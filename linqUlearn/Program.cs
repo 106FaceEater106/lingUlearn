@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
+
 namespace linqUlearn
 {
     class Program
@@ -9,9 +10,14 @@ namespace linqUlearn
         static void Main(string[] args)
         {
             int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            IEnumerable<int> secondAndThird = nums.Take(2);
+            IEnumerable<int> ien = nums.Where(x => x % 2 == 0)
+                .Select(x => x * x)
+                .Skip(1)
+                .Take(2)
+                .ToArray();
             
-            ShowRes(secondAndThird);
+            ShowRes(ien);
+            Console.WriteLine(ien.Count());
             Console.WriteLine("Linq");
             Console.ReadKey();
         }
