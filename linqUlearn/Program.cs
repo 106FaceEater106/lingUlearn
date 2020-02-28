@@ -9,9 +9,9 @@ namespace linqUlearn
         static void Main(string[] args)
         {
             int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            //List<int> even = nums.Where(x => x % 2 == 0);
-            IEnumerable<int> squares = nums.Select(x => x * x);
-            ShowRes(squares);
+            IEnumerable<int> withoutOne = nums.Skip(1);
+            
+            ShowRes(withoutOne);
             Console.WriteLine("Linq");
             Console.ReadKey();
         }
