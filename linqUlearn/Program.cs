@@ -9,9 +9,9 @@ namespace linqUlearn
         static void Main(string[] args)
         {
             int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            IEnumerable<int> withoutOne = nums.Skip(1);
+            IEnumerable<int> secondAndThird = nums.Take(2);
             
-            ShowRes(withoutOne);
+            ShowRes(secondAndThird);
             Console.WriteLine("Linq");
             Console.ReadKey();
         }
